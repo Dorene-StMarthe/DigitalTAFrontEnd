@@ -18,11 +18,7 @@ import './App.css';
 function App() {
 
   return (
-    <div>
-     <MonthParent />
-    </div>
-  );
-
+   
 class App extends Component {
   render() {
     return (
@@ -51,6 +47,6 @@ class App extends Component {
   );
 }
 }
-}
 
-export default App;
+  )}
+export default App
