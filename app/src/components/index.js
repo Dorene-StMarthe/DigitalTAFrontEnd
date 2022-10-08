@@ -1,11 +1,59 @@
 import React, { Component } from 'react';
 import '../index.css';
-import ReactDOM from 'react-dom/client'; 
+
+let baseURL = process.env.REACT_APP_BACKEND_URL
 
 class Subject extends Component {
-  /* constructor() {
-    super()
-  } */
+   constructor(props) {
+    super(props)
+    this.state = {
+      activities: [],
+    }
+  } 
+
+	// componentDidMount() {
+	// 	this.getActivities();
+	// }
+
+  getActivities = () => {
+    fetch(baseURL + '/activities', {
+      credentials: 'include'
+    })
+      .then((res) => {
+       if (res.status === 200) {
+       return res.json()
+      }else{
+       return []
+      }
+    })
+    .then((data) => {
+      if(data === []) {
+        this.setState({ activities: data })
+      }else{
+        this.setState({ activities: data.activities })
+      }
+    })
+  }
+
+  handleAddActivity = (activity) => {
+    const copyActivity = [...this.state.activities]
+    copyActivity.unshift(activity)
+    this.setState({ activity: copyActivity })
+  }
+
+  handleDelete = (id) => {
+		fetch(baseURL + '/activities/' + id, {
+			method: 'DELETE',
+			credentials: "include"
+		}).then( res => {
+			const copyActivity = [...this.state.activities];
+			const findIndex = this.state.activities.findIndex(
+					(activity) => activity._id === id
+				);
+			 copyActivity.splice(findIndex, 1);
+			 this.setState({ activities: copyActivity });
+		})
+	}
 
   render() {
     return (
@@ -17,6 +65,7 @@ class Subject extends Component {
             <h3 className="objective">Objective</h3>
             <h3 className="lessonType">Lesson Type</h3>
             <input type="button" value="Create Lesson" className="createLesson"/>
+            <input type='button' value='delete' onClick={() => this.handleDelete()}/>
           </div>
         </div>
       

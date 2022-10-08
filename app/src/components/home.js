@@ -1,8 +1,7 @@
+import React, { Component } from 'react';
 
-class Home extends React.Component {
-    constructor(props){
-        super(props)
-    }
+class Home extends Component {
+
     render() {
         return (
 <div className="container">
@@ -10,7 +9,7 @@ class Home extends React.Component {
         <div className="profileContainer">
            <nav><img src="/app/src/whitelogo.png" alt="digital TA logo"/></nav>
             <div className="userInfo">
-                <div><img src="https://thumbs.dreamstime.com/b/arab-woman-hijab-avatar-muslim-girl-covered-scarf-social-network-profile-face-eastern-islam-culture-199910794.jpg"/>
+                <div><img src="https://thumbs.dreamstime.com/b/arab-woman-hijab-avatar-muslim-girl-covered-scarf-social-network-profile-face-eastern-islam-culture-199910794.jpg" alt='user'/>
                 </div>
             </div>
             <div>

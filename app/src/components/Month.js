@@ -1,6 +1,7 @@
-
+import React, { Component } from 'react';
+import Square from './Square'
 //Make the month component
-class Month extends React.Component {  
+class Month extends Component {  
 
     //render the month
     render() {
