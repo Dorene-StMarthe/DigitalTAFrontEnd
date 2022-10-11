@@ -14,7 +14,7 @@ class Login extends React.Component {
         </nav>
         <div class="mainContent">
         <div class="loginContainer"> {/* log in container*/}
-            <form action="" > {/* login form*/}
+            <form > {/* login form*/}
                 <h3>LogIn</h3>
                 <hr/>
                 <div class="input-container"> {/* holds password and usernames*/}

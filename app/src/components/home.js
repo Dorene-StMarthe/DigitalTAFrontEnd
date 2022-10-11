@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import MonthParent from '../calendar/MonthParent'
 class Home extends Component {
 
     render() {
@@ -28,4 +28,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Home

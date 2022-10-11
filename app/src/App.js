@@ -13,17 +13,16 @@ import MonthParent from './calendar/MonthParent'
 import Subject from './components'
 
 import './App.css';
+import './index.css'
 
 //https://stackoverflow.com/questions/28868071/onchange-event-using-react-js-for-drop-down
 //Using Kirk Strobeck's answer as a guide for the drop down
 
-function App() {
 
-  return (
    
 class App extends Component {
   //add state
-  constructor(props) {
+ /*  constructor(props) {
     super(props)
     this.state = {
       activities: [],
@@ -112,17 +111,17 @@ class App extends Component {
 			 this.setState({ activities: copyActivity });
 		})
 	}
-  
+   */
   render() {
     return (
 
 <div>
-<div><MonthParent /></div>
+<div><Home /></div>
     <div id="idxContent"> 
         {/* <div id="nav" className="nav"> */}
           {/* <div id="logo"><img src='' alt="Digital TA Logo" className="logo"/></div>  */}
         {/* </div> */}
-        <div id='login'><Session loginUser={this.loginUser} register={this.register}/></div>
+        
         <div className="dateContainer">     
         
           <div id= "date" className="date"></div>
@@ -148,5 +147,5 @@ class App extends Component {
 }
 }
 
-  )}
+
 export default App
