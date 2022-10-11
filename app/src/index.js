@@ -6,28 +6,28 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const linkToCreate = () => {
-  // window.open('route')
-}
+// const linkToCreate = () => {
+//   // window.open('route')
+// }
 
-const linkToLogin= () => {
-  // window.open('route')
-}
+// const linkToLogin= () => {
+//   // window.open('route')
+// }
 
-const linkToSignUp= () => {
-  // window.open('route')
-}
+// const linkToSignUp= () => {
+//   // window.open('route')
+// }
 
-const linkToView= () => {
-  // window.open('route')
-}
+// const linkToView= () => {
+//   // window.open('route')
+// }
 
 root.render(
   <React.StrictMode>
-    <button id="createButton" onClick={linkToCreate()}>Create</button>
+    {/* <button id="createButton" onClick={linkToCreate()}>Create</button>
     <button id="loginButton" onClick={linkToLogin()}>Login</button>
     <button id="signUpButton" onClick={linkToSignUp()}>Sign Up</button>
-    <button id="viewButton" onClick={linkToView()}>Change view</button>
+    <button id="viewButton" onClick={linkToView()}>Change view</button> */}
     <App />
   </React.StrictMode>
 );

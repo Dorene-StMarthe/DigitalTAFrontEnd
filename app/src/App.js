@@ -8,9 +8,9 @@ import Home from './components/home'
 
 import Session from './components/session'
 
-import MonthParent from './components/MonthParent'
+import MonthParent from './calendar/MonthParent'
 
-import Subject from './components/index'
+import Subject from './components'
 
 import './App.css';
 
@@ -115,32 +115,32 @@ class App extends Component {
   
   render() {
     return (
-<div>
-<div>
 
-</div>
+<div>
+<div><MonthParent /></div>
     <div id="idxContent"> 
-        <div id="nav" className="nav">
-          <div id="logo"><img src='' alt="Digital TA Logo" className="logo"/></div> 
-        </div>
+        {/* <div id="nav" className="nav"> */}
+          {/* <div id="logo"><img src='' alt="Digital TA Logo" className="logo"/></div>  */}
+        {/* </div> */}
         <div id='login'><Session loginUser={this.loginUser} register={this.register}/></div>
         <div className="dateContainer">     
         
           <div id= "date" className="date"></div>
         </div>
+
       <div>
-      <MonthParent />
+      
         <div className="top">
             <Subject name ={''}/>
             <Subject name ={''}/>
             <Subject name ={''}/>
           
         </div> 
-        <div className="bottom"> 
+        {/* <div className="bottom">  */}
+            {/* <Subject name ={''}/>
             <Subject name ={''}/>
-            <Subject name ={''}/>
-            <Subject name ={''}/>
-        </div>   
+            <Subject name ={''}/> */}
+        {/* </div>    */}
       </div>
    </div>
 </div>

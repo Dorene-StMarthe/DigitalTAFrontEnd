@@ -57,19 +57,39 @@ class Subject extends Component {
 
   render() {
     return (
+
+<div className="subjectContainer">  
+      <table>
+                <tbody>
+                  {this.state.activities.map((activity) => {
+                    return (
+                      <tr key={activity._id}>
+                        <td className="subjectName">
+                          {activity.completed ? 'completed' : null}
+                          {activity.name}
+                        </td>
+                        <tr><td> {activity.type} : </td></tr>
+                        <td> {activity.subject} </td>
+                        <td onClick={() => this.handleDelete(activity._id)}>X</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
      
-        <div className="subjectContainer"> {/* each individual subject tab*/}
-          <div>{/* container that holds the text contents*/}
-            <h2 className="subjectName">Subject</h2>
-            <h2 className="lessonTitle">Lesson Title</h2>
-            <h3 className="objective">Objective</h3>
-            <h3 className="lessonType">Lesson Type</h3>
-            <input type="button" value="Create Lesson" className="createLesson"/>
-            <input type='button' value='delete' onClick={() => this.handleDelete()}/>
-          </div>
-        </div>
+//         <div className="subjectContainer"> {/* each individual subject tab*/}
+//           <div>{/* container that holds the text contents*/}
+//             <h2 className="subjectName">Subject</h2>
+//             <h2 className="lessonTitle">Lesson Title</h2>
+//             <h3 className="objective">Objective</h3>
+//             <h3 className="lessonType">Lesson Type</h3>
+//             <input type="button" value="Create Lesson" className="createLesson"/>
+//             <input type='button' value='delete' onClick={() => this.handleDelete(activities._id)}/>
+//           </div>
+//         </div>
       
-      
+
     )
   }
 }
