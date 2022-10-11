@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../index.css';
 
-let baseURL = process.env.REACT_APP_BACKEND_URL
+// let baseURL = process.env.REACT_APP_BACKEND_URL
 
 class Subject extends Component {
    constructor(props) {
@@ -11,12 +11,12 @@ class Subject extends Component {
     }
   } 
 
-	// componentDidMount() {
-	// 	this.getActivities();
-	// }
+	componentDidMount() {
+		this.getActivities();
+	}
 
   getActivities = () => {
-    fetch(baseURL + '/activities', {
+    fetch('http://localhost:3001/activities', {
       credentials: 'include'
     })
       .then((res) => {
@@ -42,7 +42,7 @@ class Subject extends Component {
   }
 
   handleDelete = (id) => {
-		fetch(baseURL + '/activities/' + id, {
+		fetch('http://localhost:3001/activities/' + id, {
 			method: 'DELETE',
 			credentials: "include"
 		}).then( res => {
@@ -68,6 +68,7 @@ class Subject extends Component {
             <input type='button' value='delete' onClick={() => this.handleDelete()}/>
           </div>
         </div>
+      
       
     )
   }
