@@ -119,9 +119,9 @@ class App extends Component {
 <div><Home /></div>
     <div id="idxContent"> 
         {/* <div id="nav" className="nav"> */}
-          {/* <div id="logo"><img src='' alt="Digital TA Logo" className="logo"/></div>  */}
+         {/*  <div id="logo"><img src='' alt="Digital TA Logo" className="logo"/></div>  */}
         {/* </div> */}
-        
+        {/* <div id='login'><Session loginUser={this.loginUser} register={this.register}/></div> */}
         <div className="dateContainer">     
         
           <div id= "date" className="date"></div>

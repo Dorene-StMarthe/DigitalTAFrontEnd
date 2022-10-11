@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import MonthParent from '../calendar/MonthParent'
+import Month from '../calendar/Month'
+import YearDropdown from '../calendar/YearDropdown';
 class Home extends Component {
 
     render() {
@@ -18,12 +20,12 @@ class Home extends Component {
             </div> 
         </div>
        <div className="calenderContainer">
-            <div className="calender">
-                Calender goes here
+            <MonthParent/>
+               
             </div>
         </div>
     </div>
-</div>
+
    )
   }
 }
