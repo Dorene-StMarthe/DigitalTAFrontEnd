@@ -52,12 +52,18 @@ width: 10%;
     width: 180px;
     height: 180px;
     border-radius: 50%;
+    
   }
   .userInfo{/* user greeting and grade information */
   color: white;
   position: relative;
   top: 250px;
   text-align: center;
+  }
+  .userClass{
+    padding-top: 60%;
+    padding-left: 100px;
+
   }
   h3 {/* CSS for user grade and class */
     font-weight:lighter;
@@ -71,8 +77,5 @@ width: 10%;
   .logo {
     height: 100px;
     width: auto;
-    
-    
-
 }
 }

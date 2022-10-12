@@ -13,7 +13,7 @@ class Home extends Component {
                 <div><img src="https://thumbs.dreamstime.com/b/arab-woman-hijab-avatar-muslim-girl-covered-scarf-social-network-profile-face-eastern-islam-culture-199910794.jpg" alt='user'/>
                 </div>
             </div>
-            <div>
+            <div className="userClass">
                 <h2>Hello, User</h2>
                 <h3>3rd Grade, Homeroom B</h3>
             </div> 

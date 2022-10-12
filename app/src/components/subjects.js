@@ -7,9 +7,38 @@ class Subject extends Component {
    constructor(props) {
     super(props)
     this.state = {
-      activities: [],
+      Subject: [],
     }
   } 
+  handleChange = (event) => {
+    this.setState({
+      Subject:event.target.value
+    })
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/activities`, {
+        method: 'POST',
+        body: JSON.stringify({name: this.state.Subject}),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(res => {
+        if(res.ok) {
+            return res.json()
+        }
+        throw new Error(res)
+    })
+    .then(resJson => {
+        console.log('NewForm - resJson', resJson)
+        this.props.handleAddActivity(resJson)
+        this.setState({name: ''})
+    })
+    .catch((err) => {console.log(err)})
+}
+  
 /* 
 	componentDidMount() {
 		this.getActivities();
@@ -78,9 +107,9 @@ class Subject extends Component {
               </table>
             </div>
       */
-            render() {
-              return (
-     <>
+  render() {
+    return (
+        <>
          <div className="subjectContainer"> {/* each individual subject tab*/}
          <div>{/* container that holds the text contents*/}  
           <form onSubmit={this.handleSubmit}>
@@ -108,8 +137,8 @@ class Subject extends Component {
                     id="subject" 
                     name="subject" 
                     onChange={this.handleChange}
-                    value={this.state.subject}
-                    placeholder="add subject"
+                    value={this.state.objective}
+                    placeholder="add objective"
               />
              <h3 className="lessonType">Lesson Type</h3>
              <input 
@@ -118,7 +147,7 @@ class Subject extends Component {
                     name="lessonType" 
                     onChange={this.handleChange}
                     value={this.state.lessonType}
-                    placeholder="add subject"
+                    placeholder="eg. lab, quiz, test"
               />
              <input type="button" value="Create Lesson" className="createLesson"/>
              {/* <input type='button' value='delete' /> */}
