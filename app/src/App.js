@@ -10,9 +10,11 @@ import Session from './components/session'
 
 import MonthParent from './calendar/MonthParent'
 
-import Subject from './components'
+import Subject from './components/subjects';
 
+import orm from './components/form'
 import './App.css';
+
 import './index.css'
 
 //https://stackoverflow.com/questions/28868071/onchange-event-using-react-js-for-drop-down
@@ -22,13 +24,13 @@ import './index.css'
    
 class App extends Component {
   //add state
- /*  constructor(props) {
+  constructor(props) {
     super(props)
     this.state = {
       activities: [],
     }
   }
-	componentDidMount() {
+/* 	componentDidMount() {
 		this.getActivities();
 	}
 
@@ -71,7 +73,7 @@ class App extends Component {
       //  refresh the page
     })
   }
-
+ */
   getActivities = () => {
     fetch('http://localhost:3001/activities', {
       credentials: 'include'
@@ -111,7 +113,7 @@ class App extends Component {
 			 this.setState({ activities: copyActivity });
 		})
 	}
-   */
+  
   render() {
     return (
 
@@ -128,7 +130,7 @@ class App extends Component {
         </div>
 
       <div>
-      
+   
         <div className="top">
             <Subject name ={''}/>
             <Subject name ={''}/>

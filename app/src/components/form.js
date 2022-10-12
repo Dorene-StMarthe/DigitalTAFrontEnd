@@ -13,7 +13,11 @@ class Form extends React.Component {
 }
 handleChange = (event) => {
   this.setState({
-    name: event.target.value
+    subject: event.target.value,
+    lessonTitle: event.target.value,
+    objective: event.target.value,
+    lessonType: event.target.value,
+    procedure: event.target.value
   })
 }
 

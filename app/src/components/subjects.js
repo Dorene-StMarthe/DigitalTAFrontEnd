@@ -10,7 +10,7 @@ class Subject extends Component {
       activities: [],
     }
   } 
-
+/* 
 	componentDidMount() {
 		this.getActivities();
 	}
@@ -77,18 +77,55 @@ class Subject extends Component {
                 </tbody>
               </table>
             </div>
-     
-//         <div className="subjectContainer"> {/* each individual subject tab*/}
-//           <div>{/* container that holds the text contents*/}
-//             <h2 className="subjectName">Subject</h2>
-//             <h2 className="lessonTitle">Lesson Title</h2>
-//             <h3 className="objective">Objective</h3>
-//             <h3 className="lessonType">Lesson Type</h3>
-//             <input type="button" value="Create Lesson" className="createLesson"/>
-//             <input type='button' value='delete' onClick={() => this.handleDelete(activities._id)}/>
-//           </div>
-//         </div>
-      
+      */
+            render() {
+              return (
+     <>
+         <div className="subjectContainer"> {/* each individual subject tab*/}
+         <div>{/* container that holds the text contents*/}  
+          <form onSubmit={this.handleSubmit}>
+            <h3 className="subject">Subject</h3>
+            <input 
+                    type="text" 
+                    id="subject" 
+                    name="subject" 
+                    onChange={this.handleChange}
+                    value={this.state.subject}
+                    placeholder="add subject"
+              />
+             <h2 className="lessonTitle">Lesson Title</h2>
+             <input 
+                    type="text" 
+                    id="lessonTitle" 
+                    name="lessonTitle" 
+                    onChange={this.handleChange}
+                    value={this.state.lessonTitle}
+                    placeholder="add Lesson Title"
+              />
+             <h3 className="objective">Objective</h3>
+             <input 
+                    type="text" 
+                    id="subject" 
+                    name="subject" 
+                    onChange={this.handleChange}
+                    value={this.state.subject}
+                    placeholder="add subject"
+              />
+             <h3 className="lessonType">Lesson Type</h3>
+             <input 
+                    type="text" 
+                    id="lessonType" 
+                    name="lessonType" 
+                    onChange={this.handleChange}
+                    value={this.state.lessonType}
+                    placeholder="add subject"
+              />
+             <input type="button" value="Create Lesson" className="createLesson"/>
+             {/* <input type='button' value='delete' /> */}
+             </form>
+           </div>
+         </div>
+      </>
 
     )
   }

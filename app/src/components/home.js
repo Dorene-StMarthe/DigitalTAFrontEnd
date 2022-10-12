@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import MonthParent from '../calendar/MonthParent'
-import Month from '../calendar/Month'
-import YearDropdown from '../calendar/YearDropdown';
+
 class Home extends Component {
 
     render() {
