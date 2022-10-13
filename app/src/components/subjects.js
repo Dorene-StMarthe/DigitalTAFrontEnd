@@ -12,7 +12,7 @@ class Subject extends Component {
   } 
   handleChange = (event) => {
     this.setState({
-      Subject:event.target.value
+      Subject: event.target.value
     })
   }
 
@@ -20,7 +20,7 @@ class Subject extends Component {
     event.preventDefault()
     fetch(`${process.env.REACT_APP_BACKEND_URL}/activities`, {
         method: 'POST',
-        body: JSON.stringify({name: this.state.Subject}),
+        body: JSON.stringify({Subject: this.state.Subject}),
         headers: {
             'Content-Type': 'application/json'
         }
@@ -34,7 +34,7 @@ class Subject extends Component {
     .then(resJson => {
         console.log('NewForm - resJson', resJson)
         this.props.handleAddActivity(resJson)
-        this.setState({name: ''})
+        this.setState({Subject: ''})
     })
     .catch((err) => {console.log(err)})
 }

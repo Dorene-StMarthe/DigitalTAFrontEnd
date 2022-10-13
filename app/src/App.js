@@ -12,7 +12,7 @@ import MonthParent from './calendar/MonthParent'
 
 import Subject from './components/subjects';
 
-import orm from './components/form'
+
 import './App.css';
 
 import './index.css'
@@ -132,9 +132,9 @@ class App extends Component {
       <div>
    
         <div className="top">
-            <Subject name ={''}/>
-            <Subject name ={''}/>
-            <Subject name ={''}/>
+            <Subject handleAddActivity ={this.handleAddActivity}/>
+            <Subject handleAddActivity ={this.handleAddActivity}/>
+            <Subject handleAddActivity ={this.handleAddActivity}/>
           
         </div> 
         {/* <div className="bottom">  */}
