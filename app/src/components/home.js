@@ -20,7 +20,6 @@ class Home extends Component {
         </div>
        <div className="calenderContainer">
             <MonthParent/>
-               
             </div>
         </div>
     </div>
